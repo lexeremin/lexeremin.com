@@ -10,7 +10,7 @@ export default function Layout({ children }) {
                name="viewport"
                content="width=device-width, initial-scale=1"
             />
-            <title>Lex Eremin Portfolio</title>
+            <title>Lex Eremin - Personal Website</title>
          </Head>
          <div>
             <Navbar />

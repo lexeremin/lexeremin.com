@@ -14,9 +14,9 @@ export default function Document() {
                href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab&display=swap"
                rel="stylesheet"
             />
-            <link rel="icon" href="static/frame-13.ico" />
+            <link rel="icon" href="static/icons/favicon.ico" />
          </Head>
-         <body>
+         <body className="dark:bg-neutral-800">
             <Main />
             <NextScript />
          </body>

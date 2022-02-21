@@ -19,6 +19,13 @@ module.exports = {
    },
    plugins: ['react', '@typescript-eslint', 'prettier', 'import'],
    rules: {
+      // 'jsx-a11y/anchor-is-valid': [
+      //    'error',
+      //    {
+      //       components: ['Link'],
+      //       specialLink: ['to']
+      //    }
+      // ],
       '@typescript-eslint/no-explicit-any': 'off',
       'import/no-unresolved': 'off',
       'react/jsx-filename-extension': [
