@@ -1,7 +1,7 @@
 export default function Logo() {
    return (
       <svg
-         className="mr-3 h-10"
+         className="h-10 w-10 m-1"
          width="403"
          height="403"
          viewBox="0 0 403 403"

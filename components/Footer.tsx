@@ -58,16 +58,16 @@ export default function Footer() {
             <div className="py-2 px-8">
                <ul className="text-gray-700">
                   <li>
-                     <Link href="/">
+                     <Link href="https://opensea.io/seeksub">
                         <a className="hover:text-teal-500 transition ease-in duration-300">
                            NFTs
                         </a>
                      </Link>
                   </li>
                   <li>
-                     <Link href="/">
+                     <Link href="https://pcpartpicker.com/b/2Z6RsY">
                         <a className="hover:text-teal-500 transition ease-in duration-300">
-                           Build
+                           mITX Build
                         </a>
                      </Link>
                   </li>
