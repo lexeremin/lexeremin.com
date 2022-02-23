@@ -12,11 +12,10 @@ export default function Layout({ children }) {
             />
             <title>Lex Eremin - Personal Website</title>
          </Head>
-         <div>
-            <Navbar />
-            {children}
-            <Footer />
-         </div>
+
+         <Navbar />
+         {children}
+         <Footer />
       </div>
    );
 }

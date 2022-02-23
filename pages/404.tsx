@@ -4,7 +4,7 @@ export default function Custom404() {
    return (
       <div className="text-center justify-center m-8">
          <div>
-            <h1 className="text-3xl font-bold underline dark:text-gray-300">
+            <h1 className="text-3xl font-bold dark:text-gray-300">
                404 - Page Not Found
             </h1>
          </div>
@@ -12,8 +12,11 @@ export default function Custom404() {
             <p className="text-xl dark:text-teal-700">
                Go back to
                <Link href="/">
-                  <a> the Home page</a>
+                  <a className="underline"> the Home page</a>
                </Link>
+            </p>
+            <p className="text-xs dark:text-gray-800">
+               I swear there is nothing fancy u can find...
             </p>
          </div>
       </div>

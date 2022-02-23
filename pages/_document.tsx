@@ -15,8 +15,13 @@ export default function Document() {
                rel="stylesheet"
             />
             <link rel="icon" href="static/icons/favicon.ico" />
+            {/* <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1"
+            /> */}
+            <title>Lex Eremin - Personal Website</title>
          </Head>
-         <body className="dark:bg-neutral-800">
+         <body className="selection:bg-purple-900 dark:bg-black dark:text-gray-100">
             <Main />
             <NextScript />
          </body>
