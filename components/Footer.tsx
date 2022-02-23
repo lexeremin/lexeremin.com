@@ -1,9 +1,91 @@
+import Link from 'next/link';
+
 export default function Footer() {
    return (
-      <footer className="flex justify-center mx-auto w-full">
-         <p className="block items-center py-2 pr-4 pl-3 rounded bg-transparent-10 text-teal-800 md:p-0">
-            &copy; {new Date().getFullYear()} - Alexander Eremin.
-         </p>
+      <footer className="flex flex-col items-center justify-center mx-auto w-full">
+         <hr className="border-1 border-double border-teal-800 w-80 rounded-lg" />
+         <div className="flex flex-col sm:flex-row">
+            <div className="py-2 px-8">
+               <ul className="text-gray-700">
+                  <li>
+                     <Link href="/">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           Home
+                        </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="/blog">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           Blog
+                        </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="/projects">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           Projects
+                        </a>
+                     </Link>
+                  </li>
+               </ul>
+            </div>
+            <div className="py-2 px-8">
+               <ul className="text-gray-700">
+                  <li>
+                     <Link href="https://github.com/seexub">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           Github
+                        </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="https://www.instagram.com/lex.eremin">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           Instagram
+                        </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="https://twitter.com/lexeremin">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           Twitter
+                        </a>
+                     </Link>
+                  </li>
+               </ul>
+            </div>
+            <div className="py-2 px-8">
+               <ul className="text-gray-700">
+                  <li>
+                     <Link href="/">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           NFTs
+                        </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="/">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           Build
+                        </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="/">
+                        <a className="hover:text-teal-500 transition ease-in duration-300">
+                           ...
+                        </a>
+                     </Link>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div>
+            <p className="flex flex-auto text-xs items-center p-3 text-teal-900 md:p-0">
+               &copy; {new Date().getFullYear()} - Alexander Eremin.
+            </p>
+         </div>
       </footer>
    );
 }

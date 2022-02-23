@@ -19,9 +19,9 @@ export default function Document() {
                name="viewport"
                content="width=device-width, initial-scale=1"
             /> */}
-            <title>Lex Eremin - Personal Website</title>
+            {/* <title>Lex Eremin - Personal Website</title> */}
          </Head>
-         <body className="selection:bg-purple-900 dark:bg-black dark:text-gray-100">
+         <body className="selection:bg-teal-700 selection:text-black dark:bg-neutral-900 dark:text-gray-100">
             <Main />
             <NextScript />
          </body>

@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 export default function Home() {
    return (
-      <main className="flex flex-col justify-center p-8">
-         <div className="flex flex-col justify-center items-start mx-auto">
+      <main className="flex flex-col justify-center p-8 ">
+         <div className="flex flex-col justify-center items-start mx-auto w-auto">
             <div className="p-4">
                <Image
                   className="rounded-full"
