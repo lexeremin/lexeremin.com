@@ -4,8 +4,8 @@ import MobileButton from './mobileButton';
 
 export default function Navbar() {
    return (
-      <nav className=" px-2 sm:px-4 py-2.5 rounded ">
-         <div className="container flex flex-nowrap justify-between items-center mx-auto">
+      <nav className=" px-2 sm:px-4 py-2.5 ">
+         <div className="container flex flex-nowrap justify-between items-center mx-auto md:w-3/5">
             <Link href="/">
                <a className="flex">
                   <Logo />

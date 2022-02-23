@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function Footer() {
    return (
-      <footer className="flex flex-col items-center justify-center mx-auto w-full">
-         <hr className="border-1 border-double border-teal-800 w-80 rounded-lg" />
-         <div className="flex flex-col sm:flex-row">
+      <footer className="flex flex-col items-center justify-center mx-auto md:w-3/5">
+         <hr className="border-1 border-double border-neutral-700 w-full rounded-lg" />
+         <div className="flex flex-col sm:flex-row py-3">
             <div className="py-2 px-8">
-               <ul className="text-gray-700">
+               <ul className="text-gray-500">
                   <li>
                      <Link href="/">
                         <a className="hover:text-teal-500 transition ease-in duration-300">
@@ -31,7 +31,7 @@ export default function Footer() {
                </ul>
             </div>
             <div className="py-2 px-8">
-               <ul className="text-gray-700">
+               <ul className="text-gray-500">
                   <li>
                      <Link href="https://github.com/seexub">
                         <a className="hover:text-teal-500 transition ease-in duration-300">
@@ -56,7 +56,7 @@ export default function Footer() {
                </ul>
             </div>
             <div className="py-2 px-8">
-               <ul className="text-gray-700">
+               <ul className="text-gray-500">
                   <li>
                      <Link href="https://opensea.io/seeksub">
                         <a className="hover:text-teal-500 transition ease-in duration-300">
