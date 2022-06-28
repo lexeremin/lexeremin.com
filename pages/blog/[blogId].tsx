@@ -1,3 +1,9 @@
+import BlogPost from '../../components/blogPost/BlogPost';
+
 export default function BlogId() {
-   return <div />;
+   return (
+      <div>
+         <BlogPost />
+      </div>
+   );
 }

@@ -52,6 +52,7 @@ export default function Footer() {
                            Twitter
                         </a>
                      </Link>
+                     (misinformative garbage)
                   </li>
                </ul>
             </div>
@@ -72,9 +73,9 @@ export default function Footer() {
                      </Link>
                   </li>
                   <li>
-                     <Link href="/">
+                     <Link href="https://devalex.sellfy.store/p/iphone-edge-wallpaper-pack/">
                         <a className="hover:text-teal-500 transition ease-in duration-300">
-                           ...
+                           My wallpaper
                         </a>
                      </Link>
                   </li>
