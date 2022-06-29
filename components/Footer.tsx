@@ -72,16 +72,9 @@ export default function Footer() {
                      </Link>
                   </li>
                   <li>
-                     My wallpaper on
-                     <Link href="https://devalex.gumroad.com/l/afpjw">
-                        <a className="hover:text-teal-500 transition ease-in duration-300">
-                           gumroad
-                        </a>
-                     </Link>
-                     and on
                      <Link href="https://devalex.sellfy.store/p/iphone-edge-wallpaper-pack/">
                         <a className="hover:text-teal-500 transition ease-in duration-300">
-                           sellfy
+                           My wallpaper on sellfy
                         </a>
                      </Link>
                   </li>
