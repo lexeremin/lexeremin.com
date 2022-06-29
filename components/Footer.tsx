@@ -52,7 +52,6 @@ export default function Footer() {
                            Twitter
                         </a>
                      </Link>
-                     (misinformative garbage)
                   </li>
                </ul>
             </div>
