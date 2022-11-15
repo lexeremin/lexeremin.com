@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import teapotPic from '/static/teapot.png';
 
 export default function Teapot() {
    return (
@@ -9,7 +10,7 @@ export default function Teapot() {
             </h2>
          </div>
          <div className="p-8 m-8">
-            <Image src="/static/teapot.png" width={500} height={300} />
+            <Image alt="Alexander Eremin" src={teapotPic} width={500} height={300} />
          </div>
       </div>
    );

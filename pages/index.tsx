@@ -21,10 +21,10 @@ export default function Home() {
             </div>
             <div className="text-justify py-10 text-lg dark:text-gray-400 p-4">
                <p>
-                  I&lsquo;m just a person who makes this website with such
-                  technology stack as: Typescript, Next.js and TailwindCSS. This
-                  is just a begining of the list... MDX, Prisma and Planetscale
-                  is comming in future for the blog section.
+                  I&lsquo;m just a person who makes this website with such technology
+                  stack as: Typescript, Next.js and TailwindCSS. This is just a begining
+                  of the list... MDX, Prisma and Planetscale is comming in future for the
+                  blog section.
                </p>
             </div>
          </div>

@@ -11,8 +11,8 @@ export default function Custom404() {
          <div>
             <p className="text-xl dark:text-teal-700">
                Go back to
-               <Link href="/">
-                  <a className="underline"> the Home page</a>
+               <Link href="/" className="underline">
+                  the Home page
                </Link>
             </p>
             <p className="text-xs dark:text-gray-800">
