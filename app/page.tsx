@@ -43,7 +43,7 @@ export default function Portfolio() {
             </div>
 
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-serika-main">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-serika-main">
                 Alexander Eremin
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed text-serika-sub px-4">
@@ -72,7 +72,7 @@ export default function Portfolio() {
       <section id="about" className="min-h-screen flex items-center py-16 sm:py-32 bg-serika-sub-alt/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-20">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-serika-main">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 text-serika-main">
               About Me
             </h2>
             <div className="w-16 sm:w-24 h-1 mx-auto bg-serika-main rounded-full"></div>
@@ -109,14 +109,14 @@ export default function Portfolio() {
                     <div className="flex items-center space-x-4">
                       <Camera className="h-6 w-6 sm:h-8 sm:w-8 text-serika-main" />
                       <div>
-                        <h3 className="font-serif text-lg sm:text-xl font-bold text-serika-text">Photography</h3>
+                        <h3 className="font-serif text-lg sm:text-xl font-black text-serika-text">Photography</h3>
                         <p className="text-sm sm:text-base text-serika-sub">Portrait, Landscape, Street</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
                       <Box className="h-6 w-6 sm:h-8 sm:w-8 text-serika-main" />
                       <div>
-                        <h3 className="font-serif text-lg sm:text-xl font-bold text-serika-text">3D Modeling</h3>
+                        <h3 className="font-serif text-lg sm:text-xl font-black text-serika-text">3D Modeling</h3>
                         <p className="text-sm sm:text-base text-serika-sub">Characters, Environments, Products</p>
                       </div>
                     </div>
@@ -132,7 +132,7 @@ export default function Portfolio() {
       <section id="contact" className="min-h-screen flex items-center py-16 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-20">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-serika-main">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 text-serika-main">
               Let's Create Together
             </h2>
             <div className="w-16 sm:w-24 h-1 mx-auto bg-serika-main rounded-full"></div>
@@ -145,7 +145,7 @@ export default function Portfolio() {
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-16">
               <Card className="p-6 sm:p-8 rounded-xl bg-serika-sub-alt border border-serika-sub-alt shadow-soft">
                 <CardContent className="space-y-4 sm:space-y-6">
-                  <h3 className="font-serif text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-serika-text">
+                  <h3 className="font-serif text-xl sm:text-2xl font-black mb-4 sm:mb-6 text-serika-text">
                     Send a Message
                   </h3>
                   <div className="space-y-4">
@@ -172,7 +172,7 @@ export default function Portfolio() {
 
               <div className="space-y-8 sm:space-y-12">
                 <div>
-                  <h3 className="font-serif text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-serika-text">
+                  <h3 className="font-serif text-xl sm:text-2xl font-black mb-6 sm:mb-8 text-serika-text">
                     Connect With Me
                   </h3>
                   <div className="space-y-4">
@@ -184,7 +184,7 @@ export default function Portfolio() {
                         <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                       </div>
                       <div>
-                        <p className="font-medium text-serika-text">Email</p>
+                        <p className="font-bold text-serika-text">Email</p>
                         <p className="text-base sm:text-lg text-serika-sub">alexander@example.com</p>
                       </div>
                     </a>
@@ -198,7 +198,7 @@ export default function Portfolio() {
                         <Github className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                       </div>
                       <div>
-                        <p className="font-medium text-serika-text">GitHub</p>
+                        <p className="font-bold text-serika-text">GitHub</p>
                         <p className="text-base sm:text-lg text-serika-sub">View my repositories</p>
                       </div>
                     </a>
@@ -212,7 +212,7 @@ export default function Portfolio() {
                         <Instagram className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                       </div>
                       <div>
-                        <p className="font-medium text-serika-text">Instagram</p>
+                        <p className="font-bold text-serika-text">Instagram</p>
                         <p className="text-base sm:text-lg text-serika-sub">Follow my visual journey</p>
                       </div>
                     </a>
@@ -226,7 +226,7 @@ export default function Portfolio() {
                         <Youtube className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                       </div>
                       <div>
-                        <p className="font-medium text-serika-text">YouTube</p>
+                        <p className="font-bold text-serika-text">YouTube</p>
                         <p className="text-base sm:text-lg text-serika-sub">Watch my tutorials</p>
                       </div>
                     </a>
@@ -240,7 +240,7 @@ export default function Portfolio() {
                         <Twitter className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                       </div>
                       <div>
-                        <p className="font-medium text-serika-text">X (Twitter)</p>
+                        <p className="font-bold text-serika-text">X (Twitter)</p>
                         <p className="text-base sm:text-lg text-serika-sub">Latest updates and thoughts</p>
                       </div>
                     </a>

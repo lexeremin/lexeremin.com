@@ -94,7 +94,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-serika-bg/95 backdrop-blur-sm border-b border-serika-sub-alt shadow-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-serif text-xl font-bold text-serika-text">
+          <Link href="/" className="font-serif text-xl font-black text-serika-text">
             Alexander Eremin
           </Link>
 

@@ -73,7 +73,7 @@ export default function ProjectDetail() {
         <div className="mb-8 sm:mb-12">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
             <div>
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-serika-main mb-4">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-serika-main mb-4">
                 {project.title}
               </h1>
               <p className="text-base sm:text-lg text-serika-sub max-w-3xl">{project.description}</p>
@@ -106,7 +106,7 @@ export default function ProjectDetail() {
               <CardContent className="p-0">
                 <div className="flex items-center space-x-2 mb-2">
                   <Calendar className="h-4 w-4 text-serika-main" />
-                  <span className="text-sm font-medium text-serika-text">Date</span>
+                  <span className="text-sm font-bold text-serika-text">Date</span>
                 </div>
                 <p className="text-sm text-serika-sub">{new Date(project.date).toLocaleDateString()}</p>
               </CardContent>
@@ -115,7 +115,7 @@ export default function ProjectDetail() {
               <CardContent className="p-0">
                 <div className="flex items-center space-x-2 mb-2">
                   <Camera className="h-4 w-4 text-serika-main" />
-                  <span className="text-sm font-medium text-serika-text">Category</span>
+                  <span className="text-sm font-bold text-serika-text">Category</span>
                 </div>
                 <p className="text-sm text-serika-sub capitalize">{project.category}</p>
               </CardContent>
@@ -124,7 +124,7 @@ export default function ProjectDetail() {
               <CardContent className="p-0">
                 <div className="flex items-center space-x-2 mb-2">
                   <Eye className="h-4 w-4 text-serika-main" />
-                  <span className="text-sm font-medium text-serika-text">Location</span>
+                  <span className="text-sm font-bold text-serika-text">Location</span>
                 </div>
                 <p className="text-sm text-serika-sub">{project.location}</p>
               </CardContent>
@@ -133,7 +133,7 @@ export default function ProjectDetail() {
               <CardContent className="p-0">
                 <div className="flex items-center space-x-2 mb-2">
                   <Heart className="h-4 w-4 text-serika-main" />
-                  <span className="text-sm font-medium text-serika-text">Engagement</span>
+                  <span className="text-sm font-bold text-serika-text">Engagement</span>
                 </div>
                 <p className="text-sm text-serika-sub">{project.likes + project.views} total</p>
               </CardContent>
@@ -159,7 +159,7 @@ export default function ProjectDetail() {
           <div className="lg:col-span-2 space-y-8">
             {/* Description */}
             <div>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-serika-text">
+              <h2 className="font-serif text-2xl sm:text-3xl font-black mb-4 sm:mb-6 text-serika-text">
                 About This Project
               </h2>
               <div className="prose prose-lg max-w-none">
@@ -173,7 +173,7 @@ export default function ProjectDetail() {
 
             {/* Image Gallery */}
             <div>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-serika-text">Gallery</h2>
+              <h2 className="font-serif text-2xl sm:text-3xl font-black mb-4 sm:mb-6 text-serika-text">Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {project.images.map((image, index) => (
                   <button key={index} onClick={() => openPreviewer(index)} className="w-full">
@@ -195,7 +195,7 @@ export default function ProjectDetail() {
             {/* Tags */}
             <Card className="p-4 sm:p-6 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
               <CardContent className="p-0">
-                <h3 className="font-serif text-lg sm:text-xl font-bold mb-4 text-serika-text">Tags</h3>
+                <h3 className="font-serif text-lg sm:text-xl font-black mb-4 text-serika-text">Tags</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -212,7 +212,7 @@ export default function ProjectDetail() {
             {/* Equipment */}
             <Card className="p-4 sm:p-6 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
               <CardContent className="p-0">
-                <h3 className="font-serif text-lg sm:text-xl font-bold mb-4 text-serika-text">Equipment Used</h3>
+                <h3 className="font-serif text-lg sm:text-xl font-black mb-4 text-serika-text">Equipment Used</h3>
                 <ul className="space-y-2">
                   {project.equipment.map((item, index) => (
                     <li key={index} className="text-sm sm:text-base text-serika-sub flex items-center">
@@ -227,7 +227,7 @@ export default function ProjectDetail() {
             {/* Contact CTA */}
             <Card className="p-4 sm:p-6 rounded-xl bg-serika-main border-2 border-serika-main shadow-soft">
               <CardContent className="p-0 text-center">
-                <h3 className="font-serif text-lg sm:text-xl font-bold mb-3 text-black">Like This Work?</h3>
+                <h3 className="font-serif text-lg sm:text-xl font-black mb-3 text-black">Like This Work?</h3>
                 <p className="text-sm sm:text-base mb-4 text-black/80">
                   Let's discuss your next project and bring your vision to life.
                 </p>

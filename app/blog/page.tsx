@@ -99,7 +99,7 @@ export default function Blog() {
       <div className="pt-32 md:pt-48 bg-serika-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-serika-main mb-4">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-serika-main mb-4">
               Creative Journal
             </h1>
             <p className="text-base sm:text-lg text-serika-sub max-w-2xl mx-auto">
@@ -113,7 +113,7 @@ export default function Blog() {
         {/* Featured Posts */}
         {featuredPosts.length > 0 && (
           <section className="mb-12 sm:mb-16">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center text-serika-text">
+            <h2 className="font-serif text-2xl sm:text-3xl font-black mb-6 sm:mb-8 flex items-center text-serika-text">
               <span className="w-1 h-6 sm:h-8 bg-serika-main mr-4 rounded-full"></span>
               Featured Articles
             </h2>
@@ -146,14 +146,14 @@ export default function Blog() {
                           </div>
                         </div>
                       </div>
-                      <h3 className="font-serif text-lg sm:text-xl font-bold group-hover:text-serika-main transition-colors text-serika-text">
+                      <h3 className="font-serif text-lg sm:text-xl font-black group-hover:text-serika-main transition-colors text-serika-text">
                         {post.title}
                       </h3>
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm sm:text-base mb-4 text-serika-sub line-clamp-3">{post.excerpt}</p>
                       <div className="flex items-center text-serika-text group-hover:text-serika-main transition-colors">
-                        <span className="text-sm font-medium">Read More</span>
+                        <span className="text-sm font-bold">Read More</span>
                         <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
                       </div>
                     </CardContent>
@@ -166,7 +166,7 @@ export default function Blog() {
 
         {/* Regular Posts */}
         <section>
-          <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center text-serika-text">
+          <h2 className="font-serif text-2xl sm:text-3xl font-black mb-6 sm:mb-8 flex items-center text-serika-text">
             <span className="w-1 h-6 sm:h-8 bg-serika-main mr-4 rounded-full"></span>
             All Articles
           </h2>
@@ -193,7 +193,7 @@ export default function Blog() {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <h3 className="font-serif text-base sm:text-lg font-bold group-hover:text-serika-main transition-colors text-serika-text">
+                    <h3 className="font-serif text-base sm:text-lg font-black group-hover:text-serika-main transition-colors text-serika-text">
                       {post.title}
                     </h3>
                   </CardHeader>
@@ -202,7 +202,7 @@ export default function Blog() {
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-serika-sub">{new Date(post.date).toLocaleDateString()}</span>
                       <div className="flex items-center text-serika-text group-hover:text-serika-main transition-colors">
-                        <span className="text-sm font-medium">Read More</span>
+                        <span className="text-sm font-bold">Read More</span>
                         <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>

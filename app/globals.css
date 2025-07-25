@@ -26,7 +26,7 @@
     --radius: 0rem;
 
     --font-roboto-mono: "Roboto Mono", monospace;
-    --font-playfair: "Playfair Display", serif;
+    --font-playfair: "Roboto Serif", serif;
 
     /* Authentic Monkeytype Serika Light Theme */
     --serika-main: #e2b714;
@@ -81,7 +81,7 @@
     font-family: var(--font-roboto-mono), monospace;
   }
   .font-serif {
-    font-family: var(--font-playfair), serif;
+    font-family: "Roboto Serif", serif;
   }
 }
 
@@ -189,4 +189,8 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--serika-main);
   opacity: 0.8;
+}
+::selection {
+  color: var(--serika-bg);
+  background: var(--serika-main);
 }

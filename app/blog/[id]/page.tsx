@@ -116,7 +116,7 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
       <article className="pt-32 md:pt-48 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Article Header */}
         <header className="mb-8 sm:mb-12">
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-serika-main mb-4 sm:mb-6 leading-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-serika-main mb-4 sm:mb-6 leading-tight">
             {post.title}
           </h1>
 
@@ -177,7 +177,7 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
               return (
                 <h2
                   key={index}
-                  className="font-serif text-2xl sm:text-3xl font-bold text-serika-text mt-8 sm:mt-12 mb-4 sm:mb-6"
+                  className="font-serif text-2xl sm:text-3xl font-black text-serika-text mt-8 sm:mt-12 mb-4 sm:mb-6"
                 >
                   {paragraph.replace("## ", "")}
                 </h2>
@@ -186,7 +186,7 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
               return (
                 <h3
                   key={index}
-                  className="font-serif text-xl sm:text-2xl font-bold text-serika-text mt-6 sm:mt-8 mb-3 sm:mb-4"
+                  className="font-serif text-xl sm:text-2xl font-black text-serika-text mt-6 sm:mt-8 mb-3 sm:mb-4"
                 >
                   {paragraph.replace("### ", "")}
                 </h3>
@@ -233,7 +233,7 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
         <div className="mb-8 sm:mb-12">
           <div className="flex items-center space-x-2 mb-4">
             <Tag className="h-4 w-4 sm:h-5 sm:w-5 text-serika-main" />
-            <span className="font-medium text-serika-text">Tags</span>
+            <span className="font-bold text-serika-text">Tags</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {post.tags.map((tag) => (
@@ -250,7 +250,7 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
         {/* Call to Action */}
         <Card className="p-6 sm:p-8 rounded-xl bg-serika-main border-2 border-serika-main shadow-soft">
           <CardContent className="p-0 text-center">
-            <h3 className="font-serif text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-black">Enjoyed This Article?</h3>
+            <h3 className="font-serif text-xl sm:text-2xl font-black mb-3 sm:mb-4 text-black">Enjoyed This Article?</h3>
             <p className="text-base sm:text-lg mb-4 sm:mb-6 text-black/80">
               Let's work together on your next photography project and capture something extraordinary.
             </p>

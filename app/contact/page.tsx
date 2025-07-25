@@ -28,7 +28,7 @@ export default function Contact() {
       <div className="pt-40 bg-serika-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-serika-main mb-4">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-serika-main mb-4">
               Let's Create Together
             </h1>
             <div className="w-16 sm:w-24 h-1 mx-auto bg-serika-main rounded-full mb-6 sm:mb-8"></div>
@@ -45,7 +45,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-16">
             <Card className="p-6 sm:p-8 rounded-xl bg-serika-sub-alt border border-serika-sub-alt shadow-soft">
               <CardContent className="space-y-4 sm:space-y-6">
-                <h3 className="font-serif text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-serika-text">
+                <h3 className="font-serif text-xl sm:text-2xl font-black mb-4 sm:mb-6 text-serika-text">
                   Send a Message
                 </h3>
                 <div className="space-y-4">
@@ -72,7 +72,7 @@ export default function Contact() {
 
             <div className="space-y-8 sm:space-y-12">
               <div>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-serika-text">
+                <h3 className="font-serif text-xl sm:text-2xl font-black mb-6 sm:mb-8 text-serika-text">
                   Connect With Me
                 </h3>
                 <div className="space-y-4">
@@ -84,7 +84,7 @@ export default function Contact() {
                       <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                     </div>
                     <div>
-                      <p className="font-medium text-serika-text">Email</p>
+                      <p className="font-bold text-serika-text">Email</p>
                       <p className="text-base sm:text-lg text-serika-sub">alexander@example.com</p>
                     </div>
                   </a>
@@ -98,7 +98,7 @@ export default function Contact() {
                       <Github className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                     </div>
                     <div>
-                      <p className="font-medium text-serika-text">GitHub</p>
+                      <p className="font-bold text-serika-text">GitHub</p>
                       <p className="text-base sm:text-lg text-serika-sub">View my repositories</p>
                     </div>
                   </a>
@@ -112,7 +112,7 @@ export default function Contact() {
                       <Instagram className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                     </div>
                     <div>
-                      <p className="font-medium text-serika-text">Instagram</p>
+                      <p className="font-bold text-serika-text">Instagram</p>
                       <p className="text-base sm:text-lg text-serika-sub">Follow my visual journey</p>
                     </div>
                   </a>
@@ -126,7 +126,7 @@ export default function Contact() {
                       <Youtube className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                     </div>
                     <div>
-                      <p className="font-medium text-serika-text">YouTube</p>
+                      <p className="font-bold text-serika-text">YouTube</p>
                       <p className="text-base sm:text-lg text-serika-sub">Watch my tutorials</p>
                     </div>
                   </a>
@@ -140,7 +140,7 @@ export default function Contact() {
                       <Twitter className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                     </div>
                     <div>
-                      <p className="font-medium text-serika-text">X (Twitter)</p>
+                      <p className="font-bold text-serika-text">X (Twitter)</p>
                       <p className="text-base sm:text-lg text-serika-sub">Latest updates and thoughts</p>
                     </div>
                   </a>
