@@ -26,20 +26,20 @@ export default function Terminal() {
     "-rw-r--r--  1 alexander  staff   512 Dec 15 10:30 architectural-details",
     "",
     "$ lsgear",
+    "💻 Laptops:",
+    "  • MacBook Pro 14-inch M1 Max - 2021",
+    "  • ThinkPad x230 - BIOS mod, 16GB RAM, running Arch Linux btw",
+    "",
+    "⌨️ Keyboards:",
+    "  • HHKB Professional Hybrid ❄️ - Blank keycaps",
+    "  • SingaKBD Unikorn - cherry HG Black, GMK Purple Nights",
+    "",
     "📷 Camera Bodies:",
-    "  • Canon EOS R5 - Primary mirrorless body",
-    "  • Canon EOS 5D Mark IV - Backup DSLR",
+    "  • Sony A7IV - Primary mirrorless body",
     "",
     "🔍 Lenses:",
-    "  • Canon RF 85mm f/1.2L - Portrait photography",
-    "  • Canon RF 35mm f/1.8 - Street & environmental",
-    "  • Canon EF 24-70mm f/2.8L - Versatile zoom",
-    "  • Canon EF 16-35mm f/2.8L - Wide angle landscapes",
-    "",
-    "💡 Lighting & Accessories:",
-    "  • Godox AD600Pro - Studio strobe",
-    "  • 5-in-1 Reflector Kit - Natural light control",
-    "  • Carbon Fiber Tripod - Stability for long exposures",
+    "  • Tamron 28-75mm f/2.8 - Versatile zoom",
+    "  • Viltrox 40mm f/2.5 - Street and daily life photography",
     "",
     "$ echo 'Thanks for exploring my creative world!'",
     "Thanks for exploring my creative world!",
@@ -63,7 +63,7 @@ export default function Terminal() {
       style={{ backgroundColor: "var(--serika-sub-alt)", color: "var(--serika-main)" }}
     >
       <div className="max-w-4xl mx-auto">
-        <div className="rounded-lg p-6 shadow-2xl" style={{ backgroundColor: "var(--serika-bg)" }}>
+        <div className="rounded-3xl p-6 shadow-2xl" style={{ backgroundColor: "var(--serika-bg)" }}>
           <div className="flex items-center space-x-2 mb-4">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -83,30 +83,18 @@ export default function Terminal() {
               <div className="text-serika-main">
                 $ # Ready to collaborate? Let's create something extraordinary together!
               </div>
-              <div className="flex space-x-4">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-4">
                 <Link href="/">
-                  <Button
-                    variant="outline"
-                    className="bg-transparent border-serika-main text-serika-main hover:bg-serika-main hover:text-black transition-all duration-200"
-                    style={{
-                      borderColor: "var(--serika-main)",
-                      color: "var(--serika-main)",
-                      backgroundColor: "transparent",
-                    }}
-                  >
+                  <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-sub-alt hover:bg-serika-sub text-serika-text shadow-soft hover:shadow-soft-lg flex items-center justify-center">
+                    {/* You can add a Home icon here if desired */}
                     Back to Portfolio
-                  </Button>
+                  </button>
                 </Link>
                 <Link href="/projects">
-                  <Button
-                    className="bg-serika-main text-black hover:bg-serika-main/90 transition-all duration-200"
-                    style={{
-                      backgroundColor: "var(--serika-main)",
-                      color: "black",
-                    }}
-                  >
+                  <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-main hover:bg-serika-main-hover text-black shadow-soft hover:shadow-soft-lg flex items-center justify-center">
+                    {/* You can add a Camera icon here if desired */}
                     View My Work
-                  </Button>
+                  </button>
                 </Link>
               </div>
             </div>

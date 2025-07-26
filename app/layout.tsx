@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Roboto_Mono, Playfair_Display } from "next/font/google"
+import { Roboto_Mono, Roboto_Serif } from "next/font/google"
 import "./globals.css"
 
 const robotoMono = Roboto_Mono({
@@ -8,23 +8,27 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
 })
 
-const playfair = Playfair_Display({
+const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-roboto-serif",
 })
 
+// const playfair = Playfair_Display({
+//   subsets: ["latin"],
+//   variable: "--font-playfair",
+// })
+
 export const metadata: Metadata = {
-  title: "Alexander Eremin - Full-Stack Developer",
+  title: "Alexander Eremin - Visual Storyteller",
   description:
-    "Personal portfolio of Alexander Eremin, a passionate full-stack developer specializing in modern web technologies.",
-  keywords: "full-stack developer, web development, React, Next.js, portfolio",
+    "Personal portfolio of Alexander Eremin, a passionate visual storyteller.",
+  keywords: "photography, video, art, design, storytelling, portfolio",
   authors: [{ name: "Alexander Eremin" }],
   openGraph: {
-    title: "Alexander Eremin - Full-Stack Developer",
+    title: "Alexander Eremin - Visual Storyteller",
     description: "Personal portfolio showcasing projects and skills in modern web development.",
     type: "website",
-  },
-    generator: 'v0.dev'
+  }
 }
 
 export default function RootLayout({
@@ -34,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${robotoMono.variable} ${playfair.variable} font-mono antialiased`}>{children}</body>
+      <body className={`${robotoMono.variable} ${robotoSerif.variable} font-mono antialiased`}>{children}</body>
     </html>
   )
 }

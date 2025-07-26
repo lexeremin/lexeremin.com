@@ -54,7 +54,7 @@ export default function Portfolio() {
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-8 sm:pt-12 px-4">
               <Link href="/projects">
-                <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-main hover:bg-serika-main/90 text-black shadow-soft hover:shadow-soft-lg">
+                <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-main hover:bg-serika-main-hover text-black shadow-soft hover:shadow-soft-lg">
                   <Camera className="mr-2 h-4 w-4 sm:h-5 sm:w-5 inline" />
                   View My Work
                 </button>
@@ -95,7 +95,7 @@ export default function Portfolio() {
                 </p>
                 <div className="pt-4 text-center">
                   <Link href="/blog">
-                    <button className="px-8 py-3 text-base rounded-xl bg-serika-main hover:bg-serika-main/90 text-black transition-all duration-200 shadow-soft hover:shadow-soft-lg">
+                    <button className="px-8 py-3 text-base rounded-xl bg-serika-main hover:bg-serika-main-hover text-black transition-all duration-200 shadow-soft hover:shadow-soft-lg">
                       <BookOpen className="mr-2 h-4 w-4 inline" />
                       Read My Blog
                     </button>
@@ -163,7 +163,7 @@ export default function Portfolio() {
                       rows={6}
                       className="rounded-lg border-2 border-serika-sub-alt bg-serika-bg focus:border-serika-main text-serika-text transition-colors shadow-soft"
                     />
-                    <button className="w-full py-3 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-main hover:bg-serika-main/90 text-black shadow-soft hover:shadow-soft-lg">
+                    <button className="w-full py-3 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-main hover:bg-serika-main-hover text-black shadow-soft hover:shadow-soft-lg">
                       Send Message
                     </button>
                   </div>

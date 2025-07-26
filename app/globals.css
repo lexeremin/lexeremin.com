@@ -30,6 +30,7 @@
 
     /* Authentic Monkeytype Serika Light Theme */
     --serika-main: #e2b714;
+    --serika-main-hover: #cfa900;
     --serika-caret: #e2b714;
     --serika-sub: #aaaeb3;
     --serika-sub-alt: #d1d3d8;
@@ -63,6 +64,7 @@
     /* Authentic Monkeytype Serika Dark Theme */
     --serika-bg: #323437;
     --serika-main: #e2b714;
+    --serika-main-hover: #cfa900;
     --serika-caret: #e2b714;
     --serika-sub: #646669;
     --serika-sub-alt: #2c2e31;
@@ -145,6 +147,9 @@
   /* Hover variants */
   .hover\:bg-serika-main:hover {
     background-color: var(--serika-main);
+  }
+  .hover\:bg-serika-main-hover:hover {
+    background-color: var(--serika-main-hover);
   }
   .hover\:bg-serika-sub-alt:hover {
     background-color: var(--serika-sub-alt);
