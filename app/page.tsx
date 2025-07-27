@@ -35,11 +35,11 @@ export default function Portfolio() {
                 alt="Profile"
                 width={160}
                 height={160}
-                className="object-cover rounded-lg border-2 border-serika-sub-alt shadow-soft"
+                className="object-cover rounded-xl border-2 border-serika-sub-alt shadow-soft"
               />
-              <div className="absolute bottom-2 right-2 p-2 sm:p-3 rounded-lg bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft flex items-center justify-center">
+              <div className="absolute -bottom-2 -right-2 p-2 sm:p-3 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
                 <Camera className="h-4 w-4 sm:h-6 sm:w-6 text-serika-main" />
-              </div>
+              </div> 
             </div>
 
             <div className="space-y-4 sm:space-y-6">
