@@ -29,7 +29,7 @@ export default function Portfolio() {
       <section id="home" className="pt-16 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center space-y-8 animate-fade-in">
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 sm:mb-12">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 sm:mb-12 flex items-end justify-end">
               <Image
                 src="/images/profile.webp"
                 alt="Profile"
@@ -37,7 +37,7 @@ export default function Portfolio() {
                 height={160}
                 className="object-cover rounded-lg border-2 border-serika-sub-alt shadow-soft"
               />
-              <div className="absolute -bottom-2 -right-2 p-2 sm:p-3 rounded-lg bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
+              <div className="absolute bottom-2 right-2 p-2 sm:p-3 rounded-lg bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft flex items-center justify-center">
                 <Camera className="h-4 w-4 sm:h-6 sm:w-6 text-serika-main" />
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function Portfolio() {
                       </div>
                     </a>
                     <a
-                      href="https://github.com"
+                      href="https://github.com/lexeremin"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 group bg-serika-sub-alt hover:bg-serika-sub shadow-soft hover:shadow-soft-lg"
@@ -203,7 +203,7 @@ export default function Portfolio() {
                       </div>
                     </a>
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/lex.eremin/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 group bg-serika-sub-alt hover:bg-serika-sub shadow-soft hover:shadow-soft-lg"
