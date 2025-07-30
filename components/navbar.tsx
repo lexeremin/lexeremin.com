@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Moon, Sun } from "lucide-react"
+import { Menu, X, Moon, Sun, AlertTriangle } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -9,6 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const [isDarkMode, setIsDarkMode] = useState(false)
+  const [showDevNotice, setShowDevNotice] = useState(true)
   const pathname = usePathname()
 
   // Initialize theme from localStorage
@@ -24,6 +25,19 @@ export default function Navbar() {
       document.documentElement.classList.remove("dark")
     }
   }, [])
+
+  // Check if dev notice was dismissed
+  useEffect(() => {
+    const dismissed = localStorage.getItem("dev-notice-dismissed")
+    if (dismissed) {
+      setShowDevNotice(false)
+    }
+  }, [])
+
+  const dismissDevNotice = () => {
+    setShowDevNotice(false)
+    localStorage.setItem("dev-notice-dismissed", "true")
+  }
 
   useEffect(() => {
     if (pathname === "/") {
@@ -91,75 +105,99 @@ export default function Navbar() {
   }, [pathname])
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-serika-bg/95 backdrop-blur-sm border-b border-serika-sub-alt shadow-soft">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-serif text-xl font-black text-serika-text">
-            Alexander Eremin
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            <Link href="/">
-              <span
-                className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
-                  pathname === "/" ? "text-serika-main" : "text-serika-sub"
-                }`}
+    <>
+      {/* Development Notice Banner */}
+      {showDevNotice && (
+        <div className="fixed top-0 w-full z-50 bg-serika-main/95 backdrop-blur-sm border-b border-serika-main-hover shadow-soft">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between py-3">
+              <div className="flex items-center space-x-3">
+                <AlertTriangle className="h-5 w-5 text-black" />
+                <span className="text-sm font-medium text-black">
+                  🚧 Website under development - No data collection happening
+                </span>
+              </div>
+              <button
+                onClick={dismissDevNotice}
+                className="p-1 rounded-lg hover:bg-black/10 transition-colors"
               >
-                About
-              </span>
-            </Link>
-            <Link href="/projects">
-              <span
-                className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
-                  pathname === "/projects" || pathname.startsWith("/projects/") ? "text-serika-main" : "text-serika-sub"
-                }`}
-              >
-                Projects
-              </span>
-            </Link>
-            <Link href="/blog">
-              <span
-                className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
-                  pathname === "/blog" || pathname.startsWith("/blog/") ? "text-serika-main" : "text-serika-sub"
-                }`}
-              >
-                Blog
-              </span>
-            </Link>
-            <Link href="/contact">
-              <span
-                className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
-                  pathname === "/contact" ? "text-serika-main" : "text-serika-sub"
-                }`}
-              >
-                Contact
-              </span>
-            </Link>
-          </div>
-
-          {/* Dark Mode Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-serika-sub-alt/70 hover:bg-serika-sub-alt transition-colors shadow-soft"
-            >
-              {isDarkMode ? (
-                <Sun className="h-4 w-4 text-serika-text" />
-              ) : (
-                <Moon className="h-4 w-4 text-serika-text" />
-              )}
-            </button>
-
-            <button
-              className="md:hidden p-2 rounded-lg bg-serika-sub-alt/70 shadow-soft"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-4 w-4 text-serika-text" /> : <Menu className="h-4 w-4 text-serika-text" />}
-            </button>
+                <X className="h-4 w-4 text-black" />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
+      <nav className={`fixed w-full z-40 bg-serika-bg/95 backdrop-blur-sm border-b border-serika-sub-alt shadow-soft ${showDevNotice ? 'top-12' : 'top-0'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="font-serif text-xl font-black text-serika-text">
+              Alexander Eremin
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              <Link href="/">
+                <span
+                  className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
+                    pathname === "/" ? "text-serika-main" : "text-serika-sub"
+                  }`}
+                >
+                  About
+                </span>
+              </Link>
+              <Link href="/projects">
+                <span
+                  className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
+                    pathname === "/projects" || pathname.startsWith("/projects/") ? "text-serika-main" : "text-serika-sub"
+                  }`}
+                >
+                  Projects
+                </span>
+              </Link>
+              <Link href="/blog">
+                <span
+                  className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
+                    pathname === "/blog" || pathname.startsWith("/blog/") ? "text-serika-main" : "text-serika-sub"
+                  }`}
+                >
+                  Blog
+                </span>
+              </Link>
+              <Link href="/contact">
+                <span
+                  className={`text-lg transition-colors duration-200 cursor-pointer hover:text-serika-main ${
+                    pathname === "/contact" ? "text-serika-main" : "text-serika-sub"
+                  }`}
+                >
+                  Contact
+                </span>
+              </Link>
+            </div>
+
+            {/* Dark Mode Toggle & Mobile Menu Button */}
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={toggleDarkMode}
+                className="p-2 rounded-lg bg-serika-sub-alt/70 hover:bg-serika-sub-alt transition-colors shadow-soft"
+              >
+                {isDarkMode ? (
+                  <Sun className="h-4 w-4 text-serika-text" />
+                ) : (
+                  <Moon className="h-4 w-4 text-serika-text" />
+                )}
+              </button>
+
+              <button
+                className="md:hidden p-2 rounded-lg bg-serika-sub-alt/70 shadow-soft"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X className="h-4 w-4 text-serika-text" /> : <Menu className="h-4 w-4 text-serika-text" />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
@@ -204,6 +242,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+    </>
   )
 }

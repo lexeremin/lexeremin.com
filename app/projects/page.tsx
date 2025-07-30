@@ -6,6 +6,7 @@ import { Camera, Box, ExternalLink, Heart, Eye } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 
 export default function Projects() {
   const [filter, setFilter] = useState("all")
@@ -184,6 +185,7 @@ export default function Projects() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

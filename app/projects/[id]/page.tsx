@@ -7,6 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 import ImagePreviewer from "@/components/image-previewer"
 
 export default function ProjectDetail() {
@@ -251,6 +252,7 @@ export default function ProjectDetail() {
         onNavigate={navigateImage}
         projectTitle={project.title}
       />
+      <Footer />
     </div>
   )
 }

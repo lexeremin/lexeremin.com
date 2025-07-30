@@ -7,6 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 
 export default function BlogPost() {
   const params = useParams()
@@ -269,6 +270,7 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
           </CardContent>
         </Card>
       </article>
+      <Footer />
     </div>
   )
 }
