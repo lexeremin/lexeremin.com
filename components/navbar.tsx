@@ -201,7 +201,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-serika-bg/95 backdrop-blur-sm border-t border-serika-sub-alt shadow-soft">
+        <div className={`md:hidden fixed w-full z-30 bg-serika-bg/95 backdrop-blur-sm border-t border-serika-sub-alt shadow-soft ${showDevNotice ? 'top-28' : 'top-16'}`}>
           <div className="px-4 py-4 space-y-4">
             <Link href="/" onClick={() => setIsMenuOpen(false)}>
               <span

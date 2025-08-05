@@ -34,9 +34,9 @@ export default function PrivacyPolicy() {
                 Политика конфиденциальности
               </h1>
               <div className="w-16 sm:w-24 h-1 mx-auto bg-serika-main rounded-full mb-6 sm:mb-8"></div>
-                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-serika-main">
-                  개인정보 처리방침
-                </h1>
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-serika-main">
+                개인정보 처리방침
+              </h1>
               </div>
               <div className="mt-12"></div>
               <p className="text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto text-serika-sub">
@@ -191,7 +191,7 @@ export default function PrivacyPolicy() {
           {/* Korean Section */}
           <div className="mb-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-black text-serika-main mb-8 text-center">
-              🇰🇷 한국어 사용자용 (Korean users)
+              🇰🇷 한국어 사용자용 (Korean users)🫰
             </h2>
             
             <p className="text-lg text-serika-sub mb-8">

@@ -7,10 +7,7 @@ export default function Footer() {
   return (
     <footer className="py-8 sm:py-12 border-t border-serika-sub-alt bg-serika-sub-alt/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <div className="text-center flex-1 text-serika-sub">
-            <p>&copy; {new Date().getFullYear()} Alexander Eremin. All rights reserved.</p>
-          </div>
+        <div className="flex flex-col items-center space-y-4">
           <div className="flex items-center space-x-4">
             {/* Privacy Policy Link */}
             <Link href="/privacy-policy" className="text-serika-sub hover:text-serika-main transition-colors duration-200">
@@ -22,6 +19,9 @@ export default function Footer() {
                 <Terminal className="h-4 w-4 text-serika-sub group-hover:text-serika-main transition-colors" />
               </div>
             </Link>
+          </div>
+          <div className="text-center text-serika-sub">
+            <p>&copy; {new Date().getFullYear()} Alexander Eremin. All rights reserved.</p>
           </div>
         </div>
       </div>
