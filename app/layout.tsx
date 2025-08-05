@@ -38,7 +38,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${robotoMono.variable} ${robotoSerif.variable} font-mono antialiased`}>{children}</body>
+      <head>
+        <meta name="theme-color" content="#e1e1e3" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#323437" media="(prefers-color-scheme: dark)" />
+      </head>
+      <body className={`${robotoMono.variable} ${robotoSerif.variable} font-mono antialiased`}>
+        {children}
+      </body>
     </html>
   )
 }

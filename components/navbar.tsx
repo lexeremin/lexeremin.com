@@ -112,16 +112,16 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-3">
               <div className="flex items-center space-x-3">
-                <AlertTriangle className="h-5 w-5 text-black" />
-                <span className="text-sm font-medium text-black">
+                <AlertTriangle className="h-5 w-5 text-serika-text" />
+                <span className="text-sm font-medium text-serika-text">
                   🚧 Website under development - No data collection happening
                 </span>
               </div>
               <button
                 onClick={dismissDevNotice}
-                className="p-1 rounded-lg hover:bg-black/10 transition-colors"
+                className="p-1 rounded-lg hover:bg-serika-text/10 transition-colors"
               >
-                <X className="h-4 w-4 text-black" />
+                <X className="h-4 w-4 text-serika-text" />
               </button>
             </div>
           </div>

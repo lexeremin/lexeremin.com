@@ -47,6 +47,29 @@ export default function ContactSection({ showHeader = false, className = "" }: C
                   rows={6}
                   className="rounded-lg border-2 border-serika-sub-alt bg-serika-bg focus:border-serika-main text-serika-text transition-colors shadow-soft"
                 />
+                
+                {/* Privacy Agreement Checkbox */}
+                <div className="flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    id="privacy-agreement"
+                    className="mt-1 h-4 w-4 rounded border-serika-main bg-serika-bg text-serika-main focus:ring-serika-main focus:ring-2 checked:bg-serika-main checked:border-serika-main"
+                  />
+                  <label htmlFor="privacy-agreement" className="text-xs sm:text-sm text-serika-sub leading-relaxed">
+                    <div className="space-y-2">
+                      <div className="text-serika-text">
+                        I agree to the <a href="/privacy-policy" className="text-serika-main hover:text-serika-main-hover underline">Privacy Policy</a>
+                      </div>
+                      <div className="text-serika-text">
+                        Я согласен с <a href="/privacy-policy" className="text-serika-main hover:text-serika-main-hover underline">Политикой конфиденциальности</a>
+                      </div>
+                      <div className="text-serika-text">
+                        <a href="/privacy-policy" className="text-serika-main hover:text-serika-main-hover underline">개인정보 처리방침</a>에 동의합니다
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                
                 <button className="w-full py-3 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-main hover:bg-serika-main-hover text-black shadow-soft hover:shadow-soft-lg">
                   Send Message
                 </button>

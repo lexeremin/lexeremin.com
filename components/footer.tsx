@@ -11,12 +11,18 @@ export default function Footer() {
           <div className="text-center flex-1 text-serika-sub">
             <p>&copy; {new Date().getFullYear()} Alexander Eremin. All rights reserved.</p>
           </div>
-          {/* Easter Egg Terminal Link */}
-          <Link href="/terminal" className="group">
-            <div className="p-2 rounded-lg bg-serika-sub-alt/50 hover:bg-serika-sub-alt transition-all duration-200 shadow-soft hover:shadow-soft-lg group-hover:scale-110">
-              <Terminal className="h-4 w-4 text-serika-sub group-hover:text-serika-main transition-colors" />
-            </div>
-          </Link>
+          <div className="flex items-center space-x-4">
+            {/* Privacy Policy Link */}
+            <Link href="/privacy-policy" className="text-serika-sub hover:text-serika-main transition-colors duration-200">
+              Privacy / 개인정보 / Политика
+            </Link>
+            {/* Easter Egg Terminal Link */}
+            <Link href="/terminal" className="group">
+              <div className="p-2 rounded-lg bg-serika-sub-alt/50 hover:bg-serika-sub-alt transition-all duration-200 shadow-soft hover:shadow-soft-lg group-hover:scale-110">
+                <Terminal className="h-4 w-4 text-serika-sub group-hover:text-serika-main transition-colors" />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
