@@ -3,7 +3,7 @@
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { Github, Mail, Instagram, Youtube, Twitter } from "lucide-react"
+import { Github, Instagram, Youtube, Image, AtSign } from "lucide-react"
 
 interface ContactSectionProps {
   showHeader?: boolean
@@ -84,15 +84,17 @@ export default function ContactSection({ showHeader = false, className = "" }: C
               </h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:alexander@example.com"
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 group bg-serika-sub-alt hover:bg-serika-sub shadow-soft hover:shadow-soft-lg"
                 >
                   <div className="p-2 sm:p-3 rounded-lg bg-serika-bg group-hover:bg-serika-main/20 transition-colors shadow-soft">
-                    <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
+                    <Youtube className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                   </div>
                   <div>
-                    <p className="font-bold text-serika-text">Email</p>
-                    <p className="text-base sm:text-lg text-serika-sub">alexander@example.com</p>
+                    <p className="font-bold text-serika-text">YouTube</p>
+                    <p className="text-base sm:text-lg text-serika-sub">Watch my tutorials</p>
                   </div>
                 </a>
                 <a
@@ -110,6 +112,20 @@ export default function ContactSection({ showHeader = false, className = "" }: C
                   </div>
                 </a>
                 <a
+                  href="https://unsplash.com/@lex_eremin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 group bg-serika-sub-alt hover:bg-serika-sub shadow-soft hover:shadow-soft-lg"
+                >
+                  <div className="p-2 sm:p-3 rounded-lg bg-serika-bg group-hover:bg-serika-main/20 transition-colors shadow-soft">
+                    <Image className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-serika-text">Unsplash</p>
+                    <p className="text-base sm:text-lg text-serika-sub">View my photography</p>
+                  </div>
+                </a>
+                <a
                   href="https://www.instagram.com/lex.eremin/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -124,31 +140,17 @@ export default function ContactSection({ showHeader = false, className = "" }: C
                   </div>
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="https://www.threads.net/@lex.eremin"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 group bg-serika-sub-alt hover:bg-serika-sub shadow-soft hover:shadow-soft-lg"
                 >
                   <div className="p-2 sm:p-3 rounded-lg bg-serika-bg group-hover:bg-serika-main/20 transition-colors shadow-soft">
-                    <Youtube className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
+                    <AtSign className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
                   </div>
                   <div>
-                    <p className="font-bold text-serika-text">YouTube</p>
-                    <p className="text-base sm:text-lg text-serika-sub">Watch my tutorials</p>
-                  </div>
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 group bg-serika-sub-alt hover:bg-serika-sub shadow-soft hover:shadow-soft-lg"
-                >
-                  <div className="p-2 sm:p-3 rounded-lg bg-serika-bg group-hover:bg-serika-main/20 transition-colors shadow-soft">
-                    <Twitter className="h-5 w-5 sm:h-6 sm:w-6 text-serika-main" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-serika-text">X (Twitter)</p>
-                    <p className="text-base sm:text-lg text-serika-sub">Latest updates and thoughts</p>
+                    <p className="font-bold text-serika-text">Threads</p>
+                    <p className="text-base sm:text-lg text-serika-sub">Follow my thoughts</p>
                   </div>
                 </a>
               </div>
