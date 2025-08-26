@@ -1,83 +1,75 @@
-"use client"
+'use client';
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Terminal() {
-  const [currentLine, setCurrentLine] = useState(0)
-  const [displayText, setDisplayText] = useState("")
+  const [currentLine, setCurrentLine] = useState(0);
+  const [displayText, setDisplayText] = useState('');
 
   const terminalLines = [
-    "$ whoami",
-    "alexander-eremin",
-    "",
-    "$ cat about.txt",
-    "Visual Artist | Photographer | 3D Modeling Specialist",
-    "Capturing moments through photography and bringing imagination to life",
-    "",
-    "$ ls -la projects/",
-    "drwxr-xr-x  8 alexander  staff   256 Dec 15 10:30 .",
-    "drwxr-xr-x  5 alexander  staff   160 Dec 15 10:30 ..",
-    "-rw-r--r--  1 alexander  staff  2048 Dec 15 10:30 urban-portraits",
-    "-rw-r--r--  1 alexander  staff  1536 Dec 15 10:30 golden-hour-landscapes",
-    "-rw-r--r--  1 alexander  staff  1024 Dec 15 10:30 mystic-forest-3d",
-    "-rw-r--r--  1 alexander  staff   768 Dec 15 10:30 futuristic-character",
-    "-rw-r--r--  1 alexander  staff   512 Dec 15 10:30 architectural-details",
-    "",
-    "$ lsgear",
-    "💻 Laptops:",
-    "  • MacBook Pro 14-inch M1 Max - Unified Memory FTW!",
-    "  • ThinkPad x230 - BIOS mod, 16GB RAM, running Arch Linux btw",
-    "",
-    "⌨️ Keyboards:",
-    "  • HHKB Professional Hybrid ❄️ - My Favorite Keyboard",
-    "  • SingaKBD Unikorn - Cherry HG Black, GMK Purple Nights, Too Heavy",
-    "",
-    "📷 Camera Bodies:",
-    "  • Sony A7IV - Beast",
-    "",
-    "🔍 Lenses:",
-    "  • Tamron 28-75mm f/2.8 - Versatile zoom",
-    "  • Viltrox 40mm f/2.5 - Street and EDC Lens",
-    "",
-    "$ cat important.txt",
-    "...",
-    "Art and Science is where are bright future is!",
-    "         .-\"|\"-.",
-    "       .'   |   `.",
-    "      .'    |    `.",
-    "      |     |     |",
-    "      |    /|\\    |",
-    "      `.  / | \\  .'",
-    "       `./  |  \\.'",
-    "         `-.|.-'",
-    "__ __   ___  __ _  ___ ___",
+    '$ whoami',
+    'alexander-eremin',
+    '',
+    '$ cat about.txt',
+    'Visual Artist | Photographer | 3D Modeling Specialist',
+    'Capturing moments through photography and bringing imagination to life',
+    '',
+    '$ ls -la projects/',
+    'drwxr-xr-x  8 alexander  staff   256 Dec 15 10:30 .',
+    'drwxr-xr-x  5 alexander  staff   160 Dec 15 10:30 ..',
+    '-rw-r--r--  1 alexander  staff  2048 Dec 15 10:30 urban-portraits',
+    '-rw-r--r--  1 alexander  staff  1536 Dec 15 10:30 golden-hour-landscapes',
+    '-rw-r--r--  1 alexander  staff  1024 Dec 15 10:30 mystic-forest-3d',
+    '-rw-r--r--  1 alexander  staff   768 Dec 15 10:30 futuristic-character',
+    '-rw-r--r--  1 alexander  staff   512 Dec 15 10:30 architectural-details',
+    '',
+    '$ lsgear',
+    '💻 Laptops:',
+    '  • MacBook Pro 14-inch M1 Max - Unified Memory FTW!',
+    '  • ThinkPad x230 - BIOS mod, 16GB RAM, running Arch Linux btw',
+    '',
+    '⌨️ Keyboards:',
+    '  • HHKB Professional Hybrid ❄️ - My Favorite Keyboard',
+    '  • SingaKBD Unikorn - Cherry HG Black, GMK Purple Nights, Too Heavy',
+    '',
+    '📷 Camera Bodies:',
+    '  • Sony A7IV - Beast, that hurts my back',
+    '',
+    '🔍 Lenses:',
+    '  • Tamron 28-75mm f/2.8 - Versatile zoom',
+    '  • Viltrox 40mm f/2.5 - Street and EDC Lens',
+    '',
+    '$ cat important.txt',
+    '...',
+    'Make Art, Science and Love, not War!',
+    '__ __   ___  __ _  ___ ___',
     "| '_ \\ / _ \\/ _` |/ __/ _ \\",
-    "| |_) |  __/ (_| | (_|  __/",
-    "| .__/ \\___|\\__,_|\\___\\___|",
-    "|_|",
-    "",
-    "$ █",
-  ]
+    '| |_) |  __/ (_| | (_|  __/',
+    '| .__/ \\___|\\__,_|\\___\\___|',
+    '|_|',
+    '',
+    '$ █',
+  ];
 
   useEffect(() => {
     if (currentLine < terminalLines.length) {
       const timer = setTimeout(() => {
-        setDisplayText((prev) => prev + terminalLines[currentLine] + "\n")
-        setCurrentLine((prev) => prev + 1)
-      }, 500)
-      return () => clearTimeout(timer)
+        setDisplayText((prev) => prev + terminalLines[currentLine] + '\n');
+        setCurrentLine((prev) => prev + 1);
+      }, 500);
+      return () => clearTimeout(timer);
     }
-  }, [currentLine, terminalLines])
+  }, [currentLine, terminalLines]);
 
   return (
     <div
       className="min-h-screen bg-serika-sub-alt text-serika-main font-mono p-4"
-      style={{ backgroundColor: "var(--serika-sub-alt)", color: "var(--serika-main)" }}
+      style={{ backgroundColor: 'var(--serika-sub-alt)', color: 'var(--serika-main)' }}
     >
       <div className="max-w-4xl mx-auto">
-        <div className="rounded-3xl p-6 shadow-2xl" style={{ backgroundColor: "var(--serika-bg)" }}>
+        <div className="rounded-3xl p-6 shadow-2xl" style={{ backgroundColor: 'var(--serika-bg)' }}>
           <div className="flex items-center space-x-2 mb-4">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -87,7 +79,7 @@ export default function Terminal() {
 
           <pre
             className="whitespace-pre-wrap text-sm leading-relaxed min-h-96 text-serika-text"
-            style={{ color: "var(--serika-text)" }}
+            style={{ color: 'var(--serika-text)' }}
           >
             {displayText}
           </pre>
@@ -116,5 +108,5 @@ export default function Terminal() {
         </div>
       </div>
     </div>
-  )
+  );
 }
