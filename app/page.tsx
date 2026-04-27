@@ -5,7 +5,7 @@ import { Camera, Box, BookOpen, Terminal } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
-import ContactSection from "@/components/contact-section"
+import ContactLinks from "@/components/contact-links"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -132,7 +132,7 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center py-16 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ContactSection showHeader={true} />
+          <ContactLinks showHeader={true} />
         </div>
       </section>
 
