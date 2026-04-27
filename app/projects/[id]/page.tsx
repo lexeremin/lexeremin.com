@@ -197,25 +197,25 @@ export default function ProjectDetail() {
               </Card>
             )}
 
-            <Card className="p-4 sm:p-6 rounded-xl bg-serika-main border-2 border-serika-main shadow-soft">
+            <Card className="p-4 sm:p-6 rounded-xl bg-serika-sub-alt border-2 border-serika-sub shadow-soft">
               <CardContent className="p-0 text-center">
-                <h3 className="font-serif text-lg sm:text-xl font-black mb-3 text-black">Want to see more?</h3>
-                <p className="text-sm sm:text-base mb-4 text-black/80">
+                <h3 className="font-serif text-lg sm:text-xl font-black mb-3 text-serika-text">Want to see more?</h3>
+                <p className="text-sm sm:text-base mb-4 text-serika-sub">
                   Browse the rest of my work or jump straight to the original project page.
                 </p>
-                <div className="space-y-3">
+                <div className="flex flex-col gap-2">
                   {project.externalUrl && (
                     <a
                       href={project.externalUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="block w-full py-2 sm:py-3 rounded-xl border-2 border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-200 shadow-soft"
+                      className="block w-full py-2 sm:py-3 rounded-xl border-2 border-serika-main bg-serika-main text-black hover:opacity-90 transition-all duration-200 shadow-soft"
                     >
                       {project.externalLabel || "Open project"}
                     </a>
                   )}
                   <Link href="/projects">
-                    <button className="w-full py-2 sm:py-3 rounded-xl border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-200 shadow-soft">
+                    <button className="w-full py-2 sm:py-3 rounded-xl border-2 border-serika-sub bg-serika-bg text-serika-text hover:border-serika-main hover:text-serika-main transition-all duration-200 shadow-soft">
                       Back to projects
                     </button>
                   </Link>

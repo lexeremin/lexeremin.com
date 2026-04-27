@@ -1,19 +1,30 @@
-"use client"
-
-import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Camera, Box, ExternalLink, Heart, Eye } from "lucide-react"
+import { Camera, Box, Code2, ExternalLink, Heart, Eye } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { projects } from "@/lib/projects"
+import { projects, type ProjectCategory } from "@/lib/projects"
 
-export default function Projects() {
-  const [filter, setFilter] = useState("all")
+const filterOptions: { id: "all" | ProjectCategory; label: string; icon: any }[] = [
+  { id: "all", label: "All Work", icon: null },
+  { id: "photography", label: "Photography", icon: Camera },
+  { id: "3d", label: "3D Models", icon: Box },
+  { id: "development", label: "Development", icon: Code2 },
+]
+
+export default async function ProjectsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ filter?: string }>
+}) {
+  const params = await searchParams
+  const rawFilter = params.filter
+  const activeFilter =
+    rawFilter === "photography" || rawFilter === "3d" || rawFilter === "development" ? rawFilter : "all"
 
   const filteredProjects =
-    filter === "all" ? projects : projects.filter((project) => project.category === filter)
+    activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter)
 
   return (
     <div className="min-h-screen transition-colors duration-300 bg-serika-bg text-serika-text">
@@ -24,7 +35,7 @@ export default function Projects() {
           <div className="text-center">
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-serika-main mb-4">My Work</h1>
             <p className="text-base sm:text-lg text-serika-sub max-w-2xl mx-auto">
-              A collection of my photography and 3D projects
+              A collection of my photography, experiments, and development projects
             </p>
           </div>
         </div>
@@ -32,25 +43,24 @@ export default function Projects() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12">
-          {[
-            { id: "all", label: "All Work", icon: null },
-            { id: "photography", label: "Photography", icon: Camera },
-            { id: "3d", label: "3D Models", icon: Box },
-          ].map((filterOption) => {
+          {filterOptions.map((filterOption) => {
             const Icon = filterOption.icon
+            const isActive = activeFilter === filterOption.id
+            const href = filterOption.id === "all" ? "/projects" : `/projects?filter=${filterOption.id}`
+
             return (
-              <button
+              <Link
                 key={filterOption.id}
-                onClick={() => setFilter(filterOption.id)}
+                href={href}
                 className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-xl transition-all duration-200 shadow-soft hover:shadow-soft-lg ${
-                  filter === filterOption.id
+                  isActive
                     ? "bg-serika-main text-black"
                     : "bg-serika-sub-alt hover:bg-serika-sub text-serika-sub hover:text-serika-text"
                 }`}
               >
                 {Icon && <Icon className="mr-2 h-3 w-3 sm:h-4 sm:w-4 inline" />}
                 {filterOption.label}
-              </button>
+              </Link>
             )
           })}
         </div>
