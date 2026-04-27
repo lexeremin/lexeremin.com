@@ -249,20 +249,20 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
         </div>
 
         {/* Call to Action */}
-        <Card className="p-6 sm:p-8 rounded-xl bg-serika-main border-2 border-serika-main shadow-soft">
+        <Card className="p-6 sm:p-8 rounded-xl bg-serika-sub-alt border border-serika-sub-alt shadow-soft">
           <CardContent className="p-0 text-center">
-            <h3 className="font-serif text-xl sm:text-2xl font-black mb-3 sm:mb-4 text-black">Enjoyed This Article?</h3>
-            <p className="text-base sm:text-lg mb-4 sm:mb-6 text-black/80">
-              Let's work together on your next photography project and capture something extraordinary.
+            <h3 className="font-serif text-xl sm:text-2xl font-black mb-3 sm:mb-4 text-serika-text">Enjoyed This Article?</h3>
+            <p className="text-base sm:text-lg mb-4 sm:mb-6 text-serika-sub">
+              Let&apos;s work together on your next photography project and capture something extraordinary.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link href="/contact">
-                <button className="w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-200 shadow-soft">
+                <button className="w-full sm:w-auto px-6 py-3 rounded-xl bg-serika-main hover:bg-serika-main-hover text-black transition-all duration-200 shadow-soft">
                   Get In Touch
                 </button>
               </Link>
               <Link href="/blog">
-                <button className="w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-black bg-transparent text-black hover:bg-black hover:text-white transition-all duration-200 shadow-soft">
+                <button className="w-full sm:w-auto px-6 py-3 rounded-xl bg-serika-bg hover:bg-serika-sub text-serika-text transition-all duration-200 shadow-soft">
                   Read More Articles
                 </button>
               </Link>

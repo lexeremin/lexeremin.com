@@ -1,28 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Moon, Sun } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import ThemeToggle from "@/components/theme-toggle"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const pathname = usePathname()
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme")
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark)
-
-    setIsDarkMode(shouldBeDark)
-    if (shouldBeDark) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }, [])
 
   useEffect(() => {
     if (pathname === "/") {
@@ -60,19 +47,6 @@ export default function Navbar() {
       element.scrollIntoView({ behavior: "smooth" })
     }
     setIsMenuOpen(false)
-  }
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !isDarkMode
-    setIsDarkMode(newDarkMode)
-
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark")
-      localStorage.setItem("theme", "dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-      localStorage.setItem("theme", "light")
-    }
   }
 
   useEffect(() => {
@@ -136,16 +110,7 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <button
-                onClick={toggleDarkMode}
-                className="p-2 rounded-lg bg-serika-sub-alt/70 hover:bg-serika-sub-alt transition-colors shadow-soft"
-              >
-                {isDarkMode ? (
-                  <Sun className="h-4 w-4 text-serika-text" />
-                ) : (
-                  <Moon className="h-4 w-4 text-serika-text" />
-                )}
-              </button>
+              <ThemeToggle />
 
               <button
                 className="md:hidden p-2 rounded-lg bg-serika-sub-alt/70 shadow-soft"

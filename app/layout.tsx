@@ -36,9 +36,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const themeScript = `(() => { try { const savedTheme = localStorage.getItem('theme'); const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark); document.documentElement.classList.toggle('dark', shouldBeDark); } catch (e) {} })();`
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <meta name="theme-color" content="#e1e1e3" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#323437" media="(prefers-color-scheme: dark)" />
       </head>

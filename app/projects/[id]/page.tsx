@@ -197,7 +197,7 @@ export default function ProjectDetail() {
               </Card>
             )}
 
-            <Card className="p-4 sm:p-6 rounded-xl bg-serika-sub-alt border-2 border-serika-sub shadow-soft">
+            <Card className="p-4 sm:p-6 rounded-xl bg-serika-sub-alt border border-serika-sub-alt shadow-soft">
               <CardContent className="p-0 text-center">
                 <h3 className="font-serif text-lg sm:text-xl font-black mb-3 text-serika-text">Want to see more?</h3>
                 <p className="text-sm sm:text-base mb-4 text-serika-sub">
@@ -209,13 +209,13 @@ export default function ProjectDetail() {
                       href={project.externalUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="block w-full py-2 sm:py-3 rounded-xl border-2 border-serika-main bg-serika-main text-black hover:opacity-90 transition-all duration-200 shadow-soft"
+                      className="block w-full py-2 sm:py-3 rounded-xl bg-serika-main hover:bg-serika-main-hover text-black transition-all duration-200 shadow-soft"
                     >
                       {project.externalLabel || "Open project"}
                     </a>
                   )}
                   <Link href="/projects">
-                    <button className="w-full py-2 sm:py-3 rounded-xl border-2 border-serika-sub bg-serika-bg text-serika-text hover:border-serika-main hover:text-serika-main transition-all duration-200 shadow-soft">
+                    <button className="w-full py-2 sm:py-3 rounded-xl bg-serika-bg hover:bg-serika-sub text-serika-text transition-all duration-200 shadow-soft">
                       Back to projects
                     </button>
                   </Link>
