@@ -26,9 +26,10 @@ export const projects: Project[] = [
     category: "photography",
     type: "Photography",
     description:
-      "A small published selection of my photography on Unsplash, focused on atmosphere, quiet places, light, and observation.",
+      "A curated public selection of my photography on Unsplash, with more than 2M views, 10k downloads, and top 10% contributor status.",
     fullDescription: [
       "This project is a simple home for the photography I choose to publish on Unsplash. It is not a complete archive of everything I shoot, but a curated public slice of the work I want to share openly.",
+      "So far the work has passed 2M views and 10k downloads on Unsplash, which places me in the platform's top 10% of contributors. I care less about chasing volume for its own sake and more about building a body of work that feels calm, intentional, and worth returning to.",
       "The images here lean toward atmosphere over spectacle. I like quiet scenes, strong geometry, natural light, and moments that feel a little suspended in time. Some frames come from ordinary places, but that is part of the point. I want them to feel observed rather than manufactured.",
       "If you want to browse more, the full published selection lives on my Unsplash profile.",
     ],
@@ -41,7 +42,7 @@ export const projects: Project[] = [
     ],
     date: "2026-04-27",
     tags: ["Unsplash", "Photography", "Atmosphere", "Architecture", "Night"],
-    equipment: ["Curated public selection", "Published on Unsplash", "Ongoing project"],
+    equipment: ["2M+ views", "10k+ downloads", "Top 10% contributor on Unsplash", "Ongoing project"],
     location: "Unsplash",
     externalUrl: "https://unsplash.com/@lex_eremin",
     externalLabel: "View on Unsplash",

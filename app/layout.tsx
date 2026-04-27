@@ -19,14 +19,14 @@ const robotoSerif = Roboto_Serif({
 // })
 
 export const metadata: Metadata = {
-  title: "Aleksandr Eremin - Visual Storyteller",
+  title: "Aleksandr Eremin",
   description:
-    "Personal portfolio of Aleksandr Eremin, a passionate visual storyteller.",
-  keywords: "photography, video, art, design, storytelling, portfolio",
+    "Personal website of Aleksandr Eremin, a polymath builder working across photography, machine learning, product engineering, and homelab systems.",
+  keywords: "Aleksandr Eremin, photography, machine learning, web development, homelab, Linux, TanStack Start, PostgreSQL",
   authors: [{ name: "Aleksandr Eremin" }],
   openGraph: {
-    title: "Aleksandr Eremin - Visual Storyteller",
-    description: "Personal portfolio showcasing projects and skills in modern web development.",
+    title: "Aleksandr Eremin",
+    description: "Personal website of Aleksandr Eremin, covering projects, writing, photography, and systems work.",
     type: "website",
   }
 }
