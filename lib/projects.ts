@@ -24,7 +24,7 @@ export const projects: Project[] = [
     id: "unsplash",
     title: "Unsplash Photography",
     category: "photography",
-    type: "Photography",
+    type: "Personal",
     description:
       "A curated public selection of my photography on Unsplash, with more than 2M views, 10k downloads, and top 10% contributor status.",
     fullDescription: [
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     id: "reactive-doom",
     title: "Reactive Doom",
     category: "development",
-    type: "Browser FPS Prototype",
+    type: "Hobby",
     description:
       "A compact Doom-like retro FPS built with React, Vite, TypeScript, and a custom canvas raycasting engine.",
     fullDescription: [

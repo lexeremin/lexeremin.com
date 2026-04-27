@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { notFound, useParams } from "next/navigation"
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Eye, ExternalLink, Calendar, Camera } from "lucide-react"
+import { Heart, Eye, ExternalLink, Calendar, FolderKanban, Layers3 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
@@ -79,39 +79,30 @@ export default function ProjectDetail() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <Card className="p-4 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
-              <CardContent className="p-0">
-                <div className="flex items-center space-x-2 mb-2">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <Card className="flex-1 p-4 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
+              <CardContent className="p-0 text-center">
+                <div className="flex items-center justify-center space-x-2 mb-2">
                   <Calendar className="h-4 w-4 text-serika-main" />
                   <span className="text-sm font-bold text-serika-text">Date</span>
                 </div>
                 <p className="text-sm text-serika-sub">{new Date(project.date).toLocaleDateString()}</p>
               </CardContent>
             </Card>
-            <Card className="p-4 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
-              <CardContent className="p-0">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Camera className="h-4 w-4 text-serika-main" />
+            <Card className="flex-1 p-4 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
+              <CardContent className="p-0 text-center">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <FolderKanban className="h-4 w-4 text-serika-main" />
                   <span className="text-sm font-bold text-serika-text">Category</span>
                 </div>
                 <p className="text-sm text-serika-sub capitalize">{project.category}</p>
               </CardContent>
             </Card>
-            <Card className="p-4 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
-              <CardContent className="p-0">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Eye className="h-4 w-4 text-serika-main" />
-                  <span className="text-sm font-bold text-serika-text">Location</span>
-                </div>
-                <p className="text-sm text-serika-sub">{project.location}</p>
-              </CardContent>
-            </Card>
-            <Card className="p-4 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
-              <CardContent className="p-0">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Heart className="h-4 w-4 text-serika-main" />
-                  <span className="text-sm font-bold text-serika-text">Project Type</span>
+            <Card className="flex-1 p-4 rounded-xl bg-serika-sub-alt border-2 border-serika-sub-alt shadow-soft">
+              <CardContent className="p-0 text-center">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Layers3 className="h-4 w-4 text-serika-main" />
+                  <span className="text-sm font-bold text-serika-text">Kind</span>
                 </div>
                 <p className="text-sm text-serika-sub">{project.type}</p>
               </CardContent>
