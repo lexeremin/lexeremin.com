@@ -1,6 +1,5 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { Camera, Box, BookOpen, Terminal } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -10,17 +9,6 @@ import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function Portfolio() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  // Initialize theme from localStorage
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme")
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark)
-
-    setIsDarkMode(shouldBeDark)
-  }, [])
-
   return (
     <div className="min-h-screen transition-colors duration-300 bg-serika-bg text-serika-text">
       <Navbar />
@@ -44,7 +32,7 @@ export default function Portfolio() {
 
             <div className="space-y-4 sm:space-y-6">
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-serika-main">
-                Alexander Eremin
+                Aleksandr Eremin
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed text-serika-sub px-4">
                 Visual storyteller capturing moments through photography and bringing imagination to life with 3D

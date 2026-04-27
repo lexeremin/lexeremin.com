@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const terminalLines = [
   '$ whoami',
-  'alexander-eremin',
+  'aleksandr-eremin',
   '',
   '$ cat about.txt',
   'Visual Artist | Photographer | 3D Modeling Specialist',
@@ -90,7 +90,7 @@ export default function TerminalPage() {
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span className="text-serika-sub text-sm ml-4">alexander@portfolio:~</span>
+            <span className="text-serika-sub text-sm ml-4">aleksandr@portfolio:~</span>
           </div>
 
           <pre

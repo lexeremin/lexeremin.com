@@ -21,7 +21,7 @@ export default function Footer() {
             </Link>
           </div>
           <div className="text-center text-serika-sub">
-            <p>&copy; {new Date().getFullYear()} Alexander Eremin. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Aleksandr Eremin. All rights reserved.</p>
           </div>
         </div>
       </div>

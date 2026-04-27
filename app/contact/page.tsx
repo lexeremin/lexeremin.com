@@ -1,22 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Navbar from "@/components/navbar"
 import ContactLinks from "@/components/contact-links"
 import Footer from "@/components/footer"
 
 export default function Contact() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  // Initialize theme from localStorage
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme")
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark)
-
-    setIsDarkMode(shouldBeDark)
-  }, [])
-
   return (
     <div className="min-h-screen transition-colors duration-300 bg-serika-bg text-serika-text">
       <Navbar />

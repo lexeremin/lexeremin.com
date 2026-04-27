@@ -102,7 +102,7 @@ Remember, every golden hour is unique. Weather conditions, season, and location 
     category: "Photography",
     readTime: "5 min read",
     date: "2024-01-15",
-    author: "Alexander Eremin",
+    author: "Aleksandr Eremin",
     image: "/placeholder.svg?height=400&width=800",
     likes: 124,
     views: 2340,
