@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Moon, Sun, AlertTriangle } from "lucide-react"
+import { Menu, X, Moon, Sun } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -9,10 +9,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const [isDarkMode, setIsDarkMode] = useState(false)
-  const [showDevNotice, setShowDevNotice] = useState(true)
   const pathname = usePathname()
 
-  // Initialize theme from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme")
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -25,19 +23,6 @@ export default function Navbar() {
       document.documentElement.classList.remove("dark")
     }
   }, [])
-
-  // Check if dev notice was dismissed
-  useEffect(() => {
-    const dismissed = localStorage.getItem("dev-notice-dismissed")
-    if (dismissed) {
-      setShowDevNotice(false)
-    }
-  }, [])
-
-  const dismissDevNotice = () => {
-    setShowDevNotice(false)
-    localStorage.setItem("dev-notice-dismissed", "true")
-  }
 
   useEffect(() => {
     if (pathname === "/") {
@@ -66,7 +51,6 @@ export default function Navbar() {
 
   const scrollToSection = (sectionId: string) => {
     if (pathname !== "/") {
-      // Navigate to home page with hash, then scroll after page loads
       window.location.href = `/#${sectionId}`
       return
     }
@@ -92,7 +76,6 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    // Handle scrolling to section when coming from other pages
     if (pathname === "/" && window.location.hash) {
       const sectionId = window.location.hash.substring(1)
       setTimeout(() => {
@@ -106,36 +89,13 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Development Notice Banner */}
-      {showDevNotice && (
-        <div className="fixed top-0 w-full z-50 bg-serika-main/95 backdrop-blur-sm border-b border-serika-main-hover shadow-soft">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between py-3">
-              <div className="flex items-center space-x-3">
-                <AlertTriangle className="h-5 w-5 text-serika-text" />
-                <span className="text-sm font-medium text-serika-text">
-                  🚧 Website under development - No data collection happening
-                </span>
-              </div>
-              <button
-                onClick={dismissDevNotice}
-                className="p-1 rounded-lg hover:bg-serika-text/10 transition-colors"
-              >
-                <X className="h-4 w-4 text-serika-text" />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <nav className={`fixed w-full z-40 bg-serika-bg/95 backdrop-blur-sm border-b border-serika-sub-alt shadow-soft ${showDevNotice ? 'top-12' : 'top-0'}`}>
+      <nav className="fixed top-0 w-full z-40 bg-serika-bg/95 backdrop-blur-sm border-b border-serika-sub-alt shadow-soft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="font-serif text-xl font-black text-serika-text">
               Alexander Eremin
             </Link>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               <Link href="/">
                 <span
@@ -175,7 +135,6 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Dark Mode Toggle & Mobile Menu Button */}
             <div className="flex items-center space-x-4">
               <button
                 onClick={toggleDarkMode}
@@ -199,9 +158,8 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className={`md:hidden fixed w-full z-30 bg-serika-bg/95 backdrop-blur-sm border-t border-serika-sub-alt shadow-soft ${showDevNotice ? 'top-28' : 'top-16'}`}>
+        <div className="md:hidden fixed top-16 w-full z-30 bg-serika-bg/95 backdrop-blur-sm border-t border-serika-sub-alt shadow-soft">
           <div className="px-4 py-4 space-y-4">
             <Link href="/" onClick={() => setIsMenuOpen(false)}>
               <span
