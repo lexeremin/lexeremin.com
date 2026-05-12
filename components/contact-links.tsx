@@ -29,7 +29,7 @@ export default function ContactLinks({ showHeader = false, className = "" }: Con
             </h3>
             <div className="space-y-4">
               <a
-                href="https://youtube.com"
+                href="https://youtube.com/@lex.eremin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 group bg-serika-bg hover:bg-serika-sub shadow-soft hover:shadow-soft-lg"
