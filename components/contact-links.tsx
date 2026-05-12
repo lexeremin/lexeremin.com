@@ -39,7 +39,7 @@ export default function ContactLinks({ showHeader = false, className = "" }: Con
                 </div>
                 <div>
                   <p className="font-bold text-serika-text">YouTube</p>
-                  <p className="text-base sm:text-lg text-serika-sub">Watch my tutorials</p>
+                  <p className="text-base sm:text-lg text-serika-sub">Watch my videos and experiments</p>
                 </div>
               </a>
               <a

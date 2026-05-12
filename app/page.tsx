@@ -1,6 +1,6 @@
 "use client"
 
-import { Camera, Box, BookOpen, Terminal } from "lucide-react"
+import { Camera, Cpu, BookOpen, Terminal, Server } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
@@ -35,8 +35,8 @@ export default function Portfolio() {
                 Aleksandr Eremin
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed text-serika-sub px-4">
-                Visual storyteller capturing moments through photography and bringing imagination to life with 3D
-                modeling
+                Polymath builder working across photography, machine learning, full-stack web development, and agentic
+                systems.
               </p>
             </div>
 
@@ -44,12 +44,12 @@ export default function Portfolio() {
               <Link href="/projects">
                 <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-main hover:bg-serika-main-hover text-black shadow-soft hover:shadow-soft-lg">
                   <Camera className="mr-2 h-4 w-4 sm:h-5 sm:w-5 inline" />
-                  View My Work
+                  View Projects
                 </button>
               </Link>
               <Link href="/contact">
                 <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-200 bg-serika-sub-alt hover:bg-serika-sub text-serika-text shadow-soft hover:shadow-soft-lg">
-                  Get In Touch
+                  Contact Me
                 </button>
               </Link>
             </div>
@@ -62,7 +62,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 text-serika-main">
-              About Me
+              About
             </h2>
             <div className="w-16 sm:w-24 h-1 mx-auto bg-serika-main rounded-full"></div>
           </div>
@@ -71,22 +71,25 @@ export default function Portfolio() {
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
               <div className="space-y-6 sm:space-y-8">
                 <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-serika-sub">
-                  I'm a passionate visual artist who finds beauty in both the real and imagined worlds. Through my lens,
-                  I capture the essence of moments, emotions, and stories that unfold around us every day.
+                  I&apos;m a polymath, a generalist by temperament, and I prefer building breadth first, then going deep
+                  where it matters. I usually communicate in English and I&apos;m always ready to learn something new.
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-serika-sub">
-                  When I'm not behind the camera, I'm crafting digital worlds and characters through 3D modeling,
-                  pushing the boundaries of creativity and bringing concepts to life in stunning detail.
+                  I earned a Master&apos;s degree in Computer Engineering and Informatics from BMSTU in 2022. Around that
+                  same period, I completed machine learning coursework, finished a thesis on hyperparameter
+                  optimization of RNNs and CNNs with genetic algorithms, and started publishing photography that later
+                  crossed 2M views on Unsplash.
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-serika-sub">
-                  My work is driven by a desire to tell stories, evoke emotions, and create visual experiences that
-                  resonate with viewers long after they've seen them.
+                  In 2026, my focus is agentic workflows on homelab infrastructure, full-stack product development with
+                  TanStack Start, PostgreSQL, Drizzle, Tailwind, and shadcn/ui, plus practical DevOps with Linux,
+                  Docker, tmux, bash, and Caddy.
                 </p>
                 <div className="pt-4 text-center">
                   <Link href="/blog">
                     <button className="px-8 py-3 text-base rounded-xl bg-serika-main hover:bg-serika-main-hover text-black transition-all duration-200 shadow-soft hover:shadow-soft-lg">
                       <BookOpen className="mr-2 h-4 w-4 inline" />
-                      Read My Blog
+                      Read Notes
                     </button>
                   </Link>
                 </div>
@@ -99,14 +102,28 @@ export default function Portfolio() {
                       <Camera className="h-6 w-6 sm:h-8 sm:w-8 text-serika-main" />
                       <div>
                         <h3 className="font-serif text-lg sm:text-xl font-black text-serika-text">Photography</h3>
-                        <p className="text-sm sm:text-base text-serika-sub">Portrait, Landscape, Street</p>
+                        <p className="text-sm sm:text-base text-serika-sub">2M+ Unsplash views, top 10% contributor</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <Box className="h-6 w-6 sm:h-8 sm:w-8 text-serika-main" />
+                      <Cpu className="h-6 w-6 sm:h-8 sm:w-8 text-serika-main" />
                       <div>
-                        <h3 className="font-serif text-lg sm:text-xl font-black text-serika-text">3D Modeling</h3>
-                        <p className="text-sm sm:text-base text-serika-sub">Characters, Environments, Products</p>
+                        <h3 className="font-serif text-lg sm:text-xl font-black text-serika-text">Machine Learning</h3>
+                        <p className="text-sm sm:text-base text-serika-sub">DeepLearning.AI, TensorFlow, GA-based thesis work</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <Terminal className="h-6 w-6 sm:h-8 sm:w-8 text-serika-main" />
+                      <div>
+                        <h3 className="font-serif text-lg sm:text-xl font-black text-serika-text">Product Engineering</h3>
+                        <p className="text-sm sm:text-base text-serika-sub">TanStack Start, PostgreSQL, Drizzle, Tailwind, shadcn/ui</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <Server className="h-6 w-6 sm:h-8 sm:w-8 text-serika-main" />
+                      <div>
+                        <h3 className="font-serif text-lg sm:text-xl font-black text-serika-text">Systems & Homelab</h3>
+                        <p className="text-sm sm:text-base text-serika-sub">Linux, Docker, tmux, Caddy, OpenClaw and agent workflows</p>
                       </div>
                     </div>
                   </CardContent>
